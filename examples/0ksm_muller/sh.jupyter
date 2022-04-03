@@ -1,0 +1,37 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -p htc 
+#SBATCH --mem=50GB
+#SBATCH --job-name a_fancy_job 
+#SBATCH --output log.jupyter-%J
+#SBATCH --exclusive
+
+# get tunneling info
+XDG_RUNTIME_DIR=""
+node=$(hostname -s)
+user=$(whoami)
+cluster="m2"
+port=8893
+
+# print tunneling instructions in jupyter-log
+echo -e "
+Command to create ssh tunnel:
+ssh -N -f -L ${port}:${node}:${port} ${user}@${cluster}.smu.edu
+
+And then:
+Open the following link in Chrome.
+http://localhost:${port}/lab?
+
+Use a Browser on your local machine to go to:
+localhost:${port}  (prefix w/ https:// if using password)
+"
+
+# load modules or conda environments here
+module purge
+export PATH="/users/zilins/software/anaconda3/bin:$PATH"
+
+source activate matplot
+
+# Run Jupyter
+jupyter-lab --no-browser --port=${port} --ip=${node}
