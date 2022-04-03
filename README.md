@@ -1,4 +1,5 @@
-# Playground for dynamics on the Muller-Brown potential.
+# MullerPot
+A Playground for dynamics on the Muller Brown potential.  
 
 ### Chain-of-state methods for finding MEPs
 Some Jupyter notebooks related to the String Method:
