@@ -14,6 +14,7 @@ nrep = 20
 replicas = numpy.zeros((nrep, 2))
 replicas[:, 0] = 0
 replicas[:, 1] = numpy.linspace(0, 2, num=nrep)
+# below are local minimums on the Muller potential. 
 # replicas[:, 0] = numpy.linspace(0.62318998, -0.55879296, num=nrep)
 # replicas[:, 1] = numpy.linspace(0.02797983,  1.44115597, num=nrep)
 
