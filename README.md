@@ -1,5 +1,5 @@
 # MullerPot
-My playground for kinky stuffs on the Muller potential.  
+My playground for some kinky stuff on the Muller potential.  
 
 ### Chain-of-state methods for finding MEPs
 
@@ -8,7 +8,7 @@ My playground for kinky stuffs on the Muller potential.
 > Reference:  
 >   String Method for the Study of Rare Events.  
 >   W. E, E. Ren, E. Vanden-Eijnden, Phys. Rev. B 66, 052301  
->   DOI: 10.1103/PhysRevB.66.052301  
+>   DOI:10.1103/PhysRevB.66.052301  
 
 - ./cos/hpm.py
 > Implemented the Holonomic Path Method on the Muller potential.  
