@@ -4,8 +4,8 @@ Authors: Zilin Song.
 """
 
 import numpy, abc, copy
-from pycosmep.cos.optimizers import OptimizerBase, SteepestDecent, AdaptiveMomentum
-from pycosmep.replica.chain import ReplicaChainBase
+from cos.optimizers import OptimizerBase, SteepestDecent, AdaptiveMomentum
+from replica.chain import ReplicaChainBase
 from scipy.interpolate import CubicSpline 
 
 class StringMethod(object):

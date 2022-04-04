@@ -45,3 +45,5 @@ cos_stringm._reparametrize()
 ax.scatter(cos_stringm.chain.cartersian_coors[:, 0], cos_stringm.chain.cartersian_coors[:, 1], s=0.5, c='r', zorder=5)
 
 plt.savefig('test_stringm_muller_adam.png')
+
+print(cos_stringm.chain.cartersian_coors)

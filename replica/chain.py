@@ -24,6 +24,9 @@ class ReplicaChainBase(abc.ABC):
 
     @classmethod
     @abc.abstractmethod
+    def p_norm(self, p:float=2):
+        """Get the p-norm distances of adjacent replicas."""
+
     def rms(self):
         """Get the RMS values of adjacent replicas.
         possibily best-fit and mass-weighted.
@@ -33,6 +36,8 @@ class ReplicaChainBase(abc.ABC):
         rms: numpy.ndarray
            The RMS values between adjacent replicas.
         """
+        return self.p_norm(2)
+
 
 class Replica2DChain(ReplicaChainBase):
     """The 2D chain-of-replicas.
@@ -73,18 +78,9 @@ class Replica2DChain(ReplicaChainBase):
         else:
             self._replicas_vec = replicas
     
-    def rms(self):
-        """Get the RMS values of adjacent replicas.
-        possibily best-fit and mass-weighted.
-        
-        Return
-        ------
-        rms: numpy.ndarray
-           The RMS values between adjacent replicas.
-        """
+    def p_norm(self, p:float=2.):
+        """Get the p-norm distances of adjacent replicas."""
         rep0s = self._replicas_vec[0:-1, :]  #  first reps
         rep1s = self._replicas_vec[1:  , :]  # second reps
 
-        rms = numpy.sqrt(numpy.sum((rep1s-rep0s)**2, axis=1))  # RMS between neighboring 2d points.
-
-        return rms
+        return numpy.power(numpy.sum(numpy.power(rep0s-rep1s, p), axis=1), 1/p)
