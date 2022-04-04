@@ -1,4 +1,4 @@
-"""A test for string method on 2D Muller potential.
+"""A test for holonomic path method on 2D Muller potential.
 
 Authors: Zilin Song.
 """
@@ -27,9 +27,7 @@ mbp = MullerPotential()
 fig, ax = mbp.plot_contourf()
 ax.scatter(chain_2d.cartersian_coors[:, 0], chain_2d.cartersian_coors[:, 1], s=0.4, c='k', zorder=5)
 
-# Optimizer & Interpolator
-
-# String method.
+# Holonomic Path Method.
 cos_hpm = HolonomicPathMethod(chain_2d)
 
 # Iterate for 150 steps.
