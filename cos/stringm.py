@@ -182,9 +182,11 @@ class StringMethod(object):
         if not self._init_reparam: # If no parametrization has been done for the string.
             self._reparametrize()
 
+        # get the projection of force vectors perpendicular to the string tangent.
         tang_vec = self._get_string_tangent()
         proj_force_vec = self._get_projected_force(force_vec, tang_vec)
 
+        # evolve the string according to the projected force vectors.
         self.chain.replicas_vec = self._optimizer.evolve(self.chain.replicas_vec, proj_force_vec)
         
         if reparametrize:
