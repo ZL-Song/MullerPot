@@ -1,5 +1,5 @@
 # MullerPot
-My playground for some kinky stuff on the Muller potential.  
+My playground for some cool stuff on the Muller potential.
 
 ### Chain-of-state methods for finding MEPs
 
