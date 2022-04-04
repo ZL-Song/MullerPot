@@ -40,6 +40,6 @@ for _ in range(niter):
     ax.plot(cos_hpm.chain.cartersian_coors[:, 0], cos_hpm.chain.cartersian_coors[:, 1], 'o-', lw=0.5, markersize=0.5, c='grey' )
 
 
-ax.scatter(cos_hpm.chain.cartersian_coors[:, 0], cos_hpm.chain.cartersian_coors[:, 1], s=0.5, c='r', zorder=5)
+ax.scatter(cos_hpm.chain.cartersian_coors[:, 0], cos_hpm.chain.cartersian_coors[:, 1], s=1, c='r', zorder=5)
 
 plt.savefig('test_hpm_muller_sd.png')

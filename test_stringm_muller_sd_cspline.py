@@ -11,7 +11,7 @@ import numpy
 import matplotlib.pyplot as plt
 
 # Define the initial chain-of-states.
-nrep = 25
+nrep = 20
 replicas = numpy.zeros((nrep, 2))
 replicas[:, 0] = 0
 replicas[:, 1] = numpy.linspace(0, 2, num=nrep)
@@ -41,6 +41,6 @@ for _ in range(niter):
     ax.plot(cos_stringm.chain.cartersian_coors[:, 0], cos_stringm.chain.cartersian_coors[:, 1], 'o-', lw=0.5, markersize=0.5, c='grey' )
 
 cos_stringm._reparametrize()
-ax.scatter(cos_stringm.chain.cartersian_coors[:, 0], cos_stringm.chain.cartersian_coors[:, 1], s=0.5, c='r', zorder=5)
+ax.scatter(cos_stringm.chain.cartersian_coors[:, 0], cos_stringm.chain.cartersian_coors[:, 1], s=1, c='r', zorder=5)
 
 plt.savefig('test_stringm_muller_sd.png')
