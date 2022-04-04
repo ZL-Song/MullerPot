@@ -15,7 +15,7 @@ from cos.optimizers import OptimizerBase, SteepestDecent, AdaptiveMomentum
 from replica.chain import ReplicaChainBase
 
 class HolonomicPathMethod(object):
-    """Class for managing the chain of replicas using the string method.
+    """Class for managing the chain of replicas using the Holonomic Path method.
     
     Parameters
     ----------
