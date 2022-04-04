@@ -17,8 +17,8 @@ My playground for some cool stuff on the Muller potential.
 >   J.B. Brokaw, K.R. Haas, J.-W. Chu, J. Chem. Theory Comput., 5, 8, 2009.  
 >   DOI:10.1021/ct9001398  
 > 
-> In some of my paper, I called this method "Replica Path Method with holonomic constraints".  
-> I think this is not the case. There is no official name for this method proposed by the authors.  
+> In some of my papers, this method was called the "Replica Path Method with holonomic constraints".  
+> This is not the offical name as no official name for this method was proposed by the authors.  
 > I'll just call it Holonomic Path Method for now.  
 
 ### Some Jupyter notebooks related to the String Method:
