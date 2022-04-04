@@ -4,14 +4,14 @@ A Playground for dynamics on the Muller potential.
 ### Chain-of-state methods for finding MEPs
 
 - ./cos/stringm.py
-> Implemented the string method (with force projections) on the Muller potential.  
+> Implemented the String Method (with force projections) on the Muller potential.  
 > Reference:  
 >   String Method for the Study of Rare Events.  
 >   W. E, E. Ren, E. Vanden-Eijnden, Phys. Rev. B 66, 052301  
 >   DOI: 10.1103/PhysRevB.66.052301  
 
 - ./cos/hpm.py
-> Implemented the holonomic path method on the Muller potential.  
+> Implemented the Holonomic Path Method on the Muller potential.  
 > Reference:  
 >   Reaction Path Optimization with Holonomic Constraints and Kinetic Energy Potentials.  
 >   J.B. Brokaw, K.R. Haas, J.-W. Chu, J. Chem. Theory Comput., 5, 8, 2009.  
