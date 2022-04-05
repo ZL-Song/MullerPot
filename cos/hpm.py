@@ -115,12 +115,12 @@ class HolonomicPathMethod(object):
             lambda_coeff = numpy.zeros((n_lambda, n_lambda))
 
             for i in range(n_lambda):       # the i-th row
-
+                                        # lambda(i)
                 lambda_coeff[i][i]       =  2. * numpy.sum((rep_b[i]-rep_b[i+1]) * (rep_a[i]   - rep_a[i+1])) / rms_a[i]   / rms_b[i]
                 
-                if i != 0:              # not the first row.
+                if i != 0:              # lambda(i-1), not the first row. 
                     lambda_coeff[i][i-1] =  1. * numpy.sum((rep_b[i]-rep_b[i+1]) * (rep_a[i-1] - rep_a[i]  )) / rms_a[i-1] / rms_b[i]
-                if i != n_lambda-1:     # not the  last row.
+                if i != n_lambda-1:     # lambda(i+1), not the  last row.
                     lambda_coeff[i][i+1] = -1. * numpy.sum((rep_b[i]-rep_b[i+1]) * (rep_a[i+1] - rep_a[i+2])) / rms_a[i+1] / rms_b[i]
 
             # ii.  solve for lambda.
