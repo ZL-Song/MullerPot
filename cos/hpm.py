@@ -135,7 +135,7 @@ class HolonomicPathMethod(object):
             ## one could only truely fix the first and the last replicas by zeroing this update, but this is not implemented. 
             ## Note that zeroing out force vectors acting on the replicas will not prevent this part from updating coordinates. 
             for i in range(1, n_lambda):
-                rep_b[i] = rep_a[i] + lambda_val[i-1] / rms_a[i-1] * (rep_a[i] - rep_a[i-1]) + lambda_val[i]/ rms_a[i] * (rep_a[i] - rep_a[i+1])
+                rep_b[i] = rep_a[i] - lambda_val[i-1] / rms_a[i-1] * (rep_a[i-1] - rep_a[i]) + lambda_val[i]/ rms_a[i] * (rep_a[i] - rep_a[i+1])
 
             rms_b = numpy.power(numpy.sum(numpy.power(rep_b[0:-1, :]-rep_b[1:, :], 2.), axis=1), 1/2.)
             
