@@ -83,7 +83,7 @@ class StringMethod(object):
 
     def _fit_intpol(self, x, y):
         """Make and return a fitted interpolator."""
-        intpol = copy.deepcopy(self._intpol_method)
+        intpol = copy.deepcopy(self._intpol_method) # deep-copy to make new objects.
         intpol.fit(x, y)
         
         return intpol
