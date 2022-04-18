@@ -128,8 +128,8 @@ class HolonomicPathMethod(object):
             lambda_val = scipy.sparse.linalg.lsqr(lambda_coeff, rms_mean-rms_b)[0]
 
             # iii. update coordinates and rms from (n-1) to (n)
-            rep_a = copy.deepcopy(rep_b) # deepcopy everything to be safe: 
-            rms_a = copy.deepcopy(rms_b) # actually numpy.copy() should be fine.
+            rep_a = numpy.copy(rep_b)
+            rms_a = numpy.copy(rms_b)
 
             # iv.  update coordinates and rms from (n) to (n+1)
             ## one could only truely fix the first and the last replicas by zeroing this update, but this is not implemented. 
